@@ -6,4 +6,7 @@ Clone it and launch
 
 Or if you don't use voodoo:
 
-```./buildout```
+```
+./bootstrap
+./buildout
+```
