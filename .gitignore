@@ -1,0 +1,14 @@
+develop-eggs
+eggs/*
+parts/*
+buildout.cfg
+buildout*.cfg
+.installed.cfg
+anybox.recipe.odoo
+a.r.odoo
+etc
+upgrade.py
+bin
+*.pyc
+upgrade.log
+local.cfg

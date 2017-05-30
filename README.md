@@ -3,3 +3,7 @@
 Clone it and launch
 
 ```voodoo run```
+
+Or if you don't use voodoo:
+
+```./buildout```
