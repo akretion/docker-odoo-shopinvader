@@ -1,1 +1,1 @@
-bin/buildout -c buildout.dev.cfg
+bin/buildout -c local.cfg
