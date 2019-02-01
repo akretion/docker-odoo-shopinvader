@@ -1,4 +1,9 @@
-/ak/
+# dotfiles
+.*
+!.travis
+!.gitignore
+# compiled python files
+*.py[co]
 /bin/
 /include/
 /lib/
@@ -7,6 +12,7 @@
 /share/
 /data/
 /odoo/external-src/
+/odoo/links
 /odoo/src/
 /.db/
 /odoo/my_project_name.egg-info/
