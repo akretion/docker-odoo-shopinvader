@@ -1,6 +1,6 @@
 odoo:
   remotes:
-    origin: https://github.com/OCA/ocb
+    origin: https://github.com/OCA/OCB
     acsone: https://github.com/acsone/odoo
   merges:
     - origin 10.0
