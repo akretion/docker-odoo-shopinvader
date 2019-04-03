@@ -1,10 +1,10 @@
 odoo:
   remotes:
-    origin: https://github.com/OCA/ocb
+    origin: https://github.com/OCA/OCB
     acsone: https://github.com/acsone/odoo
   merges:
     - origin 10.0
-    - acsone 10.0-_onchange_spec_bug-lmi
+#    - acsone 10.0-_onchange_spec_bug-lmi
 
 account-reconcile:
     modules: []
@@ -44,15 +44,15 @@ sale-workflow:
 
 rest-framework:
     modules: []
-    src: https://github.com/oca/rest-framework 10.0
+    src: https://github.com/OCA/rest-framework 10.0
 
 ak-odoo-incubator:
     modules: []
     src: https://github.com/akretion/ak-odoo-incubator 10.0
 
-connector-search-engine:
+search-engine:
     modules: []
-    src: https://github.com/akretion/connector-search-engine 10.0
+    src: https://github.com/OCA/search-engine 10.0
 
 odoo-shopinvader:
     modules: []
@@ -64,7 +64,15 @@ payment-gateway:
 
 server-tools:
     modules: []
-    src: https://github.com/oca/server-tools 10.0
+    src: https://github.com/OCA/server-tools 10.0
+
+web:
+    modules: []
+    src: https://github.com/OCA/web 10.0
+
+server-auth:
+    modules: []
+    src: https://github.com/OCA/server-auth 10.0
 
 storage:
     modules: []
@@ -72,4 +80,4 @@ storage:
 
 connector:
     modules: []
-    src: https://github.com/oca/connector 10.0
+    src: https://github.com/OCA/connector 10.0
