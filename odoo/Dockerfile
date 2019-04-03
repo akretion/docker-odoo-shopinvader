@@ -1,4 +1,4 @@
-FROM camptocamp/odoo-project:10.0-3.1.1-batteries
+FROM camptocamp/odoo-project:10.0-3.1.2-batteries
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends vim wget git
