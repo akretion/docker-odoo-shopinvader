@@ -5,3 +5,5 @@ python-magic
 vcrpy==2.0.1
 requests==2.21.0
 Adyen==2.0.0
+elasticsearch
+vcrpy-unittest

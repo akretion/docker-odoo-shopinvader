@@ -2,12 +2,27 @@ migration:
   options:
     install_command: odoo
   versions:
-    - version: 2018.06.30
+    - version: setup
       addons:
         upgrade:
+          - storage_amazon_s3
+          - server_environment_files
+          - shopinvader_custom_attribute
+          - shopinvader_delivery_carrier
+          - shopinvader_payment_paypal
           - shopinvader_payment_stripe
           - shopinvader_locomotive_payment_adyen
           - shopinvader_algolia
           - shopinvader_product_stock_state
+          - shopinvader_product_template_multi_link
+          - shopinvader_promotion_rule
+          - shopinvader_quotation_payment
           - shopinvader_image
-          - shopinvader_custom_attribute
+      operations:
+        pre:
+          - odoo -i storage_backend_s3 --no-xmlrpc --stop-after-init
+          - anthem songs.install.storage::setup
+        post:
+          - anthem songs.install.payment::setup
+          - anthem songs.install.shopinvader::setup
+          - anthem songs.install.base::setup

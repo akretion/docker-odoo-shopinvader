@@ -46,17 +46,26 @@ rest-framework:
     modules: []
     src: https://github.com/oca/rest-framework 10.0
 
+server-auth:
+    modules: [auth_api_key]
+    src: https://github.com/oca/server-auth 10.0
+
 ak-odoo-incubator:
     modules: []
     src: https://github.com/akretion/ak-odoo-incubator 10.0
 
-connector-search-engine:
+search-engine:
     modules: []
-    src: https://github.com/akretion/connector-search-engine 10.0
+    src: https://github.com/OCA/search-engine 10.0
 
 odoo-shopinvader:
-    modules: []
-    src: https://github.com/akretion/odoo-shopinvader 10.0
+  remotes:
+    origin: https://github.com/akretion/odoo-shopinvader
+    acsone: https://github.com/acsone/odoo-shopinvader
+  merges:
+    - origin 10.0
+    - origin acsone-10.0-unbind_url
+    - acsone 10.0-demo-data
 
 payment-gateway:
     modules: []
@@ -73,3 +82,6 @@ storage:
 connector:
     modules: []
     src: https://github.com/oca/connector 10.0
+web:
+    modules: []
+    src: https://github.com/OCA/web 10.0
