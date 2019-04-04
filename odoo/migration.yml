@@ -5,7 +5,6 @@ migration:
     - version: setup
       addons:
         upgrade:
-          - storage_amazon_s3
           - server_environment_files
           - shopinvader_custom_attribute
           - shopinvader_delivery_carrier
@@ -20,7 +19,7 @@ migration:
           - shopinvader_image
       operations:
         pre:
-          - odoo -i storage_backend_s3 --no-xmlrpc --stop-after-init
+          - odoo -i storage_image,storage_backend_s3 --no-xmlrpc --stop-after-init
           - anthem songs.install.storage::setup
         post:
           - anthem songs.install.payment::setup
