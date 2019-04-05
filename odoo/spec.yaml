@@ -44,11 +44,11 @@ sale-workflow:
 
 rest-framework:
     modules: []
-    src: https://github.com/oca/rest-framework 10.0
+    src: https://github.com/OCA/rest-framework 10.0
 
 server-auth:
     modules: [auth_api_key]
-    src: https://github.com/oca/server-auth 10.0
+    src: https://github.com/OCA/server-auth 10.0
 
 ak-odoo-incubator:
     modules: []
@@ -73,7 +73,7 @@ payment-gateway:
 
 server-tools:
     modules: []
-    src: https://github.com/oca/server-tools 10.0
+    src: https://github.com/OCA/server-tools 10.0
 
 storage:
     modules: []
@@ -81,7 +81,7 @@ storage:
 
 connector:
     modules: []
-    src: https://github.com/oca/connector 10.0
+    src: https://github.com/OCA/connector 10.0
 web:
     modules: []
     src: https://github.com/OCA/web 10.0
