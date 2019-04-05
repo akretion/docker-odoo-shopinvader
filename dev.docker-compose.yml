@@ -24,7 +24,7 @@ services:
       - VIRTUAL_HOST=shopinvader-docky.dy
       - VIRTUAL_PORT=8069
       - DEMO=True
-      - SERVER_WIDE_MODULES=web,web_kanban,queue_job
+      - SERVER_WIDE_MODULES=web,queue_job
     links:
       - db
     networks:
