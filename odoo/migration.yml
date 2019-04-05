@@ -5,6 +5,7 @@ migration:
     - version: setup
       addons:
         upgrade:
+          - base_technical_features
           - server_environment_files
           - shopinvader_custom_attribute
           - shopinvader_delivery_carrier
