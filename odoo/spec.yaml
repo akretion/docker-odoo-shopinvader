@@ -65,7 +65,6 @@ odoo-shopinvader:
   merges:
     - origin 10.0
     - origin acsone-10.0-unbind_url
-    - acsone 10.0-demo-data
 
 payment-gateway:
     modules: []
