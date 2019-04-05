@@ -4,18 +4,18 @@
 !.gitignore
 # compiled python files
 *.py[co]
-/bin/
-/include/
-/lib/
-/local/
-/man/
-/share/
-/data/
-/odoo/external-src/
-/odoo/links
-/odoo/src/
-/.db/
-/odoo/my_project_name.egg-info/
-/odoo/repo.yaml
+# setup.py egg_info
+*.egg-info
 
-/pip-selfcheck.json
+/odoo/src
+/odoo/external-src
+/odoo/links
+# agreggator
+/odoo/pip-selfcheck.json
+/odoo/repo.yaml
+/odoo/repos.yaml
+# translation
+*.mo
+# project
+.db
+/data
