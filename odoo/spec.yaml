@@ -4,74 +4,10 @@ odoo:
   merges:
     - origin 12.0
 
-#account-reconcile:
-#    modules: []
-#    src: https://github.com/OCA/account-reconcile 10.0
-#
-#bank-payment:
-#    modules: []
-#    src: https://github.com/OCA/bank-payment 10.0
-#
-#crm:
-#    modules: []
-#    src: https://github.com/OCA/crm 10.0
-#
-#delivery-carrier:
-#    modules: []
-#    src: https://github.com/OCA/delivery-carrier 10.0
-#
-#e-commerce:
-#    modules: []
-#    src: https://github.com/OCA/e-commerce 10.0
-#
-#product-brand:
-#    modules: []
-#    src: https://github.com/OCA/product-attribute 10.0
-#
-#product-variant:
-#    modules: []
-#    src: https://github.com/OCA/product-variant 10.0
-#
-queue:
-    modules: [queue_job]
-    src: https://github.com/OCA/queue 12.0
+contract:
+    modules: [agreement]
+    src:  https://github.com/oca/contract 12.0
 
-sale-workflow:
-    modules: [sale_automatic_workflow]
-    src: https://github.com/odoonz/sale-workflow 12.0-mig-sale_automatic_workflow
-
-rest-framework:
-    modules: []
-    src: https://github.com/oca/rest-framework 10.0
-
-ak-odoo-incubator:
-    modules: [base_sparse_field_list_support, base_jsonify]
-    src: https://github.com/akretion/ak-odoo-incubator 10.0
-
-server-auth:
-    modules: [auth_api_key]
-    src: https://github.com/OCA/server-auth 10.0
-
-connector-search-engine:
-    modules: []
-    src: https://github.com/akretion/connector-search-engine 10.0
-
-odoo-shopinvader:
-    modules: [base_url]
-    src: https://github.com/akretion/odoo-shopinvader 10.0
-
-payment-gateway:
-    modules: []
-    src: https://github.com/akretion/payment-gateway 10.0
-
-server-tools:
-    modules: [onchange_helper, keychain]
-    src: https://github.com/oca/server-tools 10.0
-
-storage:
-    modules: []
-    src: https://github.com/akretion/storage 10.0
-
-connector:
-    modules: [component, component_event, connector]
-    src: https://github.com/guewen/connector 12.0-migrate-connector
+web:
+    modules: [web_responsive]
+    src:  https://github.com/oca/web 12.0

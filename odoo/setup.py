@@ -4,7 +4,7 @@ with open('VERSION') as fd:
     version = fd.read().strip()
 
 setup(
-    name="my-project-name",
+    name="douze",
     version=version,
     description="project description",
     license='GNU Affero General Public License v3 or later (AGPLv3+)',

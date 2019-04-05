@@ -21,10 +21,9 @@ services:
       - DB_HOST=db
       - RUNNING_ENV=dev
       - MARABUNTA_MODE=demo
-      - VIRTUAL_HOST=shopinvader-docky.dy
+      - VIRTUAL_HOST=douze.dy
       - VIRTUAL_PORT=8069
       - DEMO=True
-      - SERVER_WIDE_MODULES=web,web_kanban,queue_job
     links:
       - db
     networks:

@@ -41,6 +41,6 @@ def setup_language(ctx):
 
 def main(ctx):
     """ Create demo data """
-    req = Requirement.parse('my-project-name')
+    req = Requirement.parse('douze')
     setup_company(ctx, req)
     setup_language(ctx)
