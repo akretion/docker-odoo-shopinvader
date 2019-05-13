@@ -20,7 +20,6 @@ services:
       - DB_NAME=db
       - DB_HOST=db
       - RUNNING_ENV=dev
-      - MARABUNTA_MODE=demo
       - VIRTUAL_HOST=douze.dy
       - VIRTUAL_PORT=8069
       - DEMO=True
