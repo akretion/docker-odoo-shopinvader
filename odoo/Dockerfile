@@ -19,5 +19,8 @@ COPY ./links /odoo/links
 RUN pip install -e /odoo
 
 COPY ./templates/odoo.cfg.tmpl /templates/odoo.cfg.tmpl
+ENV ADDONS_PATH /odoo/src/addons,/odoo/src/odoo/addons,/odoo/links,/odoo/local-src,/odoo/external-src/shopinvader,/odoo/external-src/shopinvader-pim,/odoo/external-src/shopinvader-payment,/odoo/external-src/shopinvader-misc,/odoo/external-src/search-engine,/odoo/external-src/bank-payment,/odoo/external-src/product-brand,/odoo/external-src/rest-framework,/odoo/external-src/sale-workflow,/odoo/external-src/queue,/odoo/external-src/product-variant,/odoo/external-src/server-tools,/odoo/external-src/delivery-carrier,/odoo/external-src/payment-gateway,/odoo/external-src/storage,/odoo/external-src/connector,/odoo/external-src/e-commerce,/odoo/external-src/ak-odoo-incubator,/odoo/external-src/crm,/odoo/external-src/account-reconcile
 
-ENV ADDONS_PATH /odoo/src/addons,/odoo/src/odoo/addons,/odoo/links,/odoo/local-src,/odoo/external-src/odoo-shopinvader,/odoo/external-src/search-engine,/odoo/external-src/bank-payment,/odoo/external-src/product-brand,/odoo/external-src/rest-framework,/odoo/external-src/sale-workflow,/odoo/external-src/queue,/odoo/external-src/product-variant,/odoo/external-src/server-tools,/odoo/external-src/delivery-carrier,/odoo/external-src/payment-gateway,/odoo/external-src/storage,/odoo/external-src/connector,/odoo/external-src/e-commerce,/odoo/external-src/ak-odoo-incubator,/odoo/external-src/crm,/odoo/external-src/account-reconcile
+COPY script/dump.sh /odoo-bin/dump.sh
+COPY script/001_preload_db /before-migrate-entrypoint.d/001_preload_db
+COPY backup /backup

@@ -1,19 +1,31 @@
 sudo: required
 
 services: docker
+language: python
 
 env:
   matrix:
     - VERSION=10.0
 
 before_install:
-  - sudo pip install git+https://github.com/akretion/ak
-
-script:
+  - pip install git+https://github.com/akretion/ak
+  - pip install docker-compose
   - cd odoo
   - ak build
+  - mkdir .db
   - sed -i -n '/# Only for dev/q;p' .dockerignore
+  - cd ..
+  # We are runnning docker to pre-create the database to speed up the init
+  # for the docker image, avoid useless build of database to save the planet
+  # and save testing time for locomotive_shopinvader test integration
+  - docker-compose -f ci.docker-compose.yml run --rm --service-ports odoo odoo --stop-after-init
+  - docker-compose -f ci.docker-compose.yml run odoo dump.sh
+  # This time we re-build it with the database and filestore backup in the image
+  - cd odoo
   - docker build --no-cache -t current-latest .
+
+script:
+  - echo "Nothing"
 
 after_success:
   - ../travis/publish.sh

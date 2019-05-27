@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$( psql -tAc "SELECT to_regclass('shopinvader_backend')" )" != 'shopinvader_backend' ]
+then
+    echo "Database does not exist"
+    if [ -f /backup/db.sql ]
+    then
+        echo "Load database backup"
+        psql db < /backup/db.sql
+        gosu odoo cp -r /backup/filestore/* /data/odoo/filestore
+    else
+        echo "Database backup do not exist create it"
+    fi
+else
+    echo "Database already exist"
+fi

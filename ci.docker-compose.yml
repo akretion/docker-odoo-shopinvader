@@ -1,0 +1,31 @@
+services:
+  db:
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_DB=db
+    image: quay.io/akretion/postgresql:10
+    volumes:
+      - .db/:/var/lib/postgresql/data
+  odoo:
+    build: odoo
+    environment:
+      - PYTHONDONTWRITEBYTECODE=True
+      - LOCAL_USER_ID=$UID
+      - DB_USER=odoo
+      - DB_PASS=odoo
+      - DB_NAME=db
+      - DB_HOST=db
+      - ODOO_ADMIN_PASSWORD=admin
+      - RUNNING_ENV=dev
+      - MARABUNTA_MODE=demo
+      - DEMO=True
+      - SERVER_WIDE_MODULES=web,web_kanban,queue_job
+    links:
+      - db
+    volumes:
+      - ./odoo:/odoo
+      - ./data/addons:/data/odoo/addons
+      - ./data/filestore:/data/odoo/filestore
+      - ./data/sessions:/data/odoo/sessions
+      - ./backup:/backup
+version: '3'

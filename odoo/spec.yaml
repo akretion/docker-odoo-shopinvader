@@ -58,12 +58,29 @@ search-engine:
     modules: []
     src: https://github.com/OCA/search-engine 10.0
 
-odoo-shopinvader:
+shopinvader:
   remotes:
-    origin: https://github.com/akretion/odoo-shopinvader
+    origin: https://github.com/shopinvader/odoo-shopinvader
   merges:
     - origin 10.0
-    - origin 10.0-fix-auth
+
+shopinvader-pim:
+  remotes:
+    origin: https://github.com/shopinvader/odoo-pim
+  merges:
+    - origin 10.0
+
+shopinvader-payment:
+  remotes:
+    origin: https://github.com/shopinvader/odoo-shopinvader-payment
+  merges:
+    - origin 10.0
+
+shopinvader-misc:
+  remotes:
+    origin: https://github.com/shopinvader/odoo-misc
+  merges:
+    - origin 10.0
 
 payment-gateway:
     modules: []
