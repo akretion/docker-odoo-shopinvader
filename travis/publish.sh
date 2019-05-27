@@ -10,7 +10,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo "Publish latest"
     docker tag current-latest $IMAGE:$TRAVIS_BRANCH-latest
     docker push $IMAGE:$TRAVIS_BRANCH-latest
-    TAG = $TRAVIS_BRANCH-`date +%Y%m%d-%H%m`
+    TAG=$TRAVIS_BRANCH-`date +%Y%m%d-%H%m`
     echo "Publish tagged $TAG"
     docker tag current-latest $IMAGE:$TAG
     docker push $IMAGE:$TAG

@@ -6,8 +6,10 @@ then
     if [ -f /backup/db.sql ]
     then
         echo "Load database backup"
-        psql db < /backup/db.sql
-        gosu odoo cp -r /backup/filestore/* /data/odoo/filestore
+        dropdb $PGDATABASE --if-exists
+        createdb $PGDATABASE
+        psql $PGDATABASE -f /backup/db.sql >/dev/null
+        cp -r /backup/filestore/* /data/odoo/filestore
     else
         echo "Database backup do not exist create it"
     fi
