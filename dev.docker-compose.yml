@@ -10,6 +10,14 @@ services:
     image: quay.io/akretion/postgresql:10
     volumes:
       - .db/:/var/lib/postgresql/data
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.0.0
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - ./esdata:/usr/share/elasticsearch/data
+    labels:
+      traefik.www.frontend.rule: "Host:demo-elastic.dy"
   odoo:
     build: odoo
     environment:
@@ -21,16 +29,14 @@ services:
       - DB_HOST=db
       - RUNNING_ENV=dev
       - MARABUNTA_MODE=demo
-      - VIRTUAL_HOST=shopinvader-docky.dy
-      - VIRTUAL_PORT=8069
       - DEMO=True
       - SERVER_WIDE_MODULES=web,web_kanban,queue_job
     links:
       - db
-    networks:
-      default:
-        aliases:
-          - shopinvader-docky.dy
+      - elastic
+    labels:
+      traefik.longpolling.frontend.rule: "Host:demo-odoo.dy;PathPrefix:/longpolling/"
+      traefik.www.frontend.rule: "Host:demo-odoo.dy"
     volumes:
       - ./odoo:/odoo
       - ./data/addons:/data/odoo/addons
