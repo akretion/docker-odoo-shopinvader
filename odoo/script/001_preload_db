@@ -10,6 +10,7 @@ then
         createdb $PGDATABASE
         psql $PGDATABASE -f /backup/db.sql >/dev/null
         cp -r /backup/filestore/* /data/odoo/filestore
+        chown -R odoo:odoo /data/odoo/filestore
     else
         echo "Database backup do not exist create it"
     fi
