@@ -23,6 +23,9 @@ services:
       - VIRTUAL_HOST=douze.dy
       - VIRTUAL_PORT=8069
       - DEMO=True
+      - WORKERS=0
+      - LIMIT_TIME_CPU=600
+      - LIMIT_TIME_REAL=800
     links:
       - db
     networks:
@@ -34,4 +37,17 @@ services:
       - ./data/addons:/data/odoo/addons
       - ./data/filestore:/data/odoo/filestore
       - ./data/sessions:/data/odoo/sessions
+    links:
+      - db
+      # - adminer
+  # adminer:
+  #   image: adminer
+  #   environment:
+  #     - QUERY_PARAMETER=/?pgsql=db&username=odoo&db=db
+  #     - VIRTUAL_HOST=adminer.lfg.dy
+  #     - VIRTUAL_PORT=8080
+  #     - ADMINER_PLUGINS=tables-filter
+  #     - ADMINER_DESIGN=rmsoft
+  #   links:
+  #     - db
 version: '3'

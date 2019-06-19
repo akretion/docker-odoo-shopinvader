@@ -5,9 +5,43 @@ odoo:
     - origin 12.0
 
 contract:
-    modules: [agreement]
+    modules: [agreement,agreement_sale]
     src:  https://github.com/oca/contract 12.0
 
+carrier:
+    modules: [delivery_auto_refresh,delivery_multi_destination,partner_delivery_zone]
+    src:  https://github.com/oca/delivery-carrier 12.0
+
+carrier-label:
+    modules: [base_delivery_carrier_label]
+    src:  https://github.com/akretion/delivery-carrier 12-deliv-label-pack-only
+
+carrier-gls:
+    modules: [delivery_carrier_label_gls]
+    src: https://github.com/akretion/delivery-carrier 12-gls
+
+partner-contact:
+    modules: []
+    src:  https://github.com/oca/partner-contact 12.0
+
+server-env:
+    modules: []
+    src:  https://github.com/oca/server-env 12.0
+
+server-tools:
+    modules: []
+    src:  https://github.com/oca/server-tools 12.0
+
 web:
-    modules: [web_responsive]
+    modules: [web_responsive,web_environment_ribbon,web_export_view,web_tree_many2one_clickable]
     src:  https://github.com/oca/web 12.0
+    remotes:
+        oca: https://github.com/oca/web
+        ak: https://github.com/akretion/web
+    merges:
+        - 
+            remote: oca
+            ref: 12.0
+        - 
+            remote: ak
+            ref: 12-web-auto-install-dav
