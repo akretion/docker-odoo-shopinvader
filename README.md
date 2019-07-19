@@ -20,7 +20,7 @@ If you want to develop in odoo or in locomotive, follow this documentation.
 Download this repo, you may not wan to `git clone`.
 
 ```
-curl -sL https://github.com/akretion/docker-odoo-shopinvader/archive/10.0.zip | tar xz
+curl -sL https://github.com/akretion/docker-odoo-shopinvader/archive/10.0.tar.gz | tar xz
 cd docker-odoo-shopinvader-10.0
 ```
 
@@ -40,6 +40,12 @@ docker-odoo-shopinvader-10.0 $ cd ..
 ```
 You can manage branches in /odoo/spec.yaml before running ak.
 
+### Install the default locomotive template
+
+```
+docker-odoo-shopinvader-10.0 $ curl -sL https://github.com/shopinvader/shopinvader-template/archive/master.tar.gz | tar xz
+docker-odoo-shopinvader-10.0 $ docky run wagon bundle exec wagon deploy test -d -v -f
+```
 
 ### Run the containers
 
