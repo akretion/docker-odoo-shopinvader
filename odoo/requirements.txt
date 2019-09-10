@@ -1,3 +1,5 @@
 git+https://github.com/akretion/locomotivecms-python-client@master#egg=locomotivecms
 git+https://github.com/cheah/adyen-cse-python@master#egg=adyen-cse-python
-stripe==2.0.3
+stripe==2.35.1
+vcrpy-unittest
+python-slugify>=3.0.2

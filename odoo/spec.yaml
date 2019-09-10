@@ -1,84 +1,90 @@
 odoo:
   remotes:
-    origin: https://github.com/OCA/OCB
-    acsone: https://github.com/acsone/odoo
+    origin: https://github.com/oca/ocb
   merges:
     - origin 12.0
 
 account-reconcile:
     modules: []
-    src: https://github.com/OCA/account-reconcile 12.0
+    src: https://github.com/oca/account-reconcile 12.0
 
 bank-payment:
     modules: []
-    src: https://github.com/OCA/bank-payment 12.0
+    src: https://github.com/oca/bank-payment 12.0
 
 crm:
     modules: []
-    src: https://github.com/OCA/crm 12.0
+    src: https://github.com/oca/crm 12.0
 
 delivery-carrier:
     modules: []
-    src: https://github.com/OCA/delivery-carrier 12.0
+    src: https://github.com/oca/delivery-carrier 12.0
 
 e-commerce:
     modules: []
-    src: https://github.com/OCA/e-commerce 12.0
+    src: https://github.com/oca/e-commerce 12.0
 
 product-brand:
     modules: []
-    src: https://github.com/OCA/product-attribute 12.0
+    src: https://github.com/oca/product-attribute 12.0
 
 product-variant:
     modules: []
-    src: https://github.com/OCA/product-variant 12.0
+    src: https://github.com/oca/product-variant 12.0
 
 queue:
     modules: []
-    src: https://github.com/OCA/queue 12.0
+    src: https://github.com/oca/queue 12.0
 
 sale-workflow:
     modules: []
-    src: https://github.com/OCA/sale-workflow 12.0
+    src: https://github.com/akretion/sale-workflow 12-mig-sale_automatic_workflow_payment_mode
 
 rest-framework:
     modules: []
-    src: https://github.com/OCA/rest-framework 12.0
+    src: https://github.com/oca/rest-framework 12.0
 
 server-auth:
     modules: [auth_api_key]
-    src: https://github.com/OCA/server-auth 12.0
-
-ak-odoo-incubator:
-    modules: []
-    src: https://github.com/akretion/ak-odoo-incubator 12.0
+    src: https://github.com/oca/server-auth 12.0
 
 search-engine:
     modules: []
-    src: https://github.com/OCA/search-engine 12.0
-
-#odoo-shopinvader:
-#  remotes:
-#    origin: https://github.com/akretion/odoo-shopinvader
-#    acsone: https://github.com/acsone/odoo-shopinvader
-#  merges:
-#   - origin 12.0
-
-#payment-gateway:
-#    modules: []
-#    src: https://github.com/akretion/payment-gateway 12.0
+    src: https://github.com/oca/search-engine 12.0
 
 server-tools:
     modules: []
-    src: https://github.com/OCA/server-tools 12.0
-
-#storage:
-#    modules: []
-#    src: https://github.com/akretion/storage 12.0
+    src: https://github.com/oca/server-tools 12.0
 
 connector:
     modules: []
-    src: https://github.com/OCA/connector 12.0
-web:
+    src: https://github.com/oca/connector 12.0
+
+sale-workflow:
     modules: []
-    src: https://github.com/OCA/web 12.0
+    src: https://github.com/oca/sale-workflow 12.0
+
+server-env:
+    modules: ['server_environment']
+    src: https://github.com/oca/server-env 12.0
+
+server-backend:
+    modules: []
+    src: https://github.com/oca/server-backend 12.0
+
+shopinvader:
+    modules: []
+    src: https://github.com/shopinvader/odoo-shopinvader 12.0
+
+shopinvader-misc:
+    modules: []
+    src: https://github.com/shopinvader/odoo-misc 10.0
+
+shopinvader-payment:
+    modules: []
+    src: https://github.com/akretion/odoo-shopinvader-payment 12.0-add-test-on-all-module
+
+
+storage:
+    modules: []
+    src: https://github.com/akretion/storage 12.0
