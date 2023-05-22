@@ -3,7 +3,7 @@ git+https://github.com/cheah/adyen-cse-python@master#egg=adyen-cse-python
 stripe==2.0.3
 python-magic
 vcrpy==2.0.1
-requests==2.21.0
+requests==2.31.0
 Adyen==2.0.0
 elasticsearch
 vcrpy-unittest
